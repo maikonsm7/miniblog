@@ -1,10 +1,11 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar';
 import Home from './pages/Home'
 import Entrar from './pages/Entrar'
 import Cadastrar from './pages/Cadastrar'
 import About from './pages/About'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path={'/cadastrar'} element={<Cadastrar />}/>
         <Route path={'/about'} element={<About />}/>
       </Routes>
+      <Footer />
       </BrowserRouter>
     </div>
   )
