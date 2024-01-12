@@ -5,8 +5,8 @@ const NavBar = () => {
         <div>
             <nav>
             <NavLink to={'/'}>Home</NavLink>
-            <NavLink to={'/entrar'}>Entrar</NavLink>
-            <NavLink to={'/cadastrar'}>Cadastrar</NavLink>
+            <NavLink to={'/login'}>Entrar</NavLink>
+            <NavLink to={'/register'}>Cadastrar</NavLink>
             <NavLink to={'/about'}>Sobre</NavLink>
             </nav>
         </div>
