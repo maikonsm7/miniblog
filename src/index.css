@@ -9,7 +9,7 @@ form{
 label{
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin-bottom: 1em;
 }
 label span{
   margin-bottom: .3em;
@@ -58,10 +58,11 @@ background-color: #DC3545;
 button[disabled]{
   background-color: #AAA;
 }
-.container .error{
+.error{
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
   padding: 5px;
   border-radius: 5px;
 }
+

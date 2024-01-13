@@ -16,6 +16,15 @@ const Register = () => {
             email,
             pass
         }
+
+        if(pass !== passConfirm){
+            setError('As senhas precisam ser iguais!')
+            return
+        }else{
+            setError('')
+        }
+
+        console.log(user)
     }
     return(
         <div>
@@ -38,6 +47,7 @@ const Register = () => {
                     <input type="password" name="passConfirm" value={passConfirm} onChange={e => setPassConfirm(e.target.value)} placeholder='Confirme sua senha' required/>
                 </label>
                 <button className='btn'>Cadastrar</button>
+                {error && <p className='error'>{error}</p>}
             </form>
         </div>
     )
