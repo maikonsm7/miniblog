@@ -4,6 +4,7 @@ import { useAuthValue } from '../context/AuthContext'
 import './NavBar.css'
 const NavBar = () => { 
     const { user } = useAuthValue()
+    const { logout } = useAuthentication()
     return(
         <div>
             <nav>
@@ -21,6 +22,7 @@ const NavBar = () => {
             </>
             )}
             <NavLink to={'/about'}>Sobre</NavLink>
+            {user && <button onClick={logout}>Sair</button>}
             </nav>
         </div>
     )
