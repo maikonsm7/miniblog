@@ -2,7 +2,7 @@ import { useAuthentication } from '../hooks/useAuthentication'
 import { useState, useEffect } from 'react'
 
 const Register = () => {
-    const [name, setName] = useState('')
+    const [displayName, setDisplayName] = useState('')
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [passConfirm, setPassConfirm] = useState('')
@@ -20,7 +20,7 @@ const Register = () => {
         e.preventDefault()
 
         const user = {
-            name,
+            displayName,
             email,
             pass
         }
@@ -41,7 +41,7 @@ const Register = () => {
             <form onSubmit={handleSubmit}>
                 <label>
                     <span>Nome</span>
-                    <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} placeholder='Digite seu Nome' required/>
+                    <input type="text" name="displayName" value={displayName} onChange={e => setDisplayName(e.target.value)} placeholder='Digite seu Nome' required/>
                 </label>
                 <label>
                     <span>Email</span>

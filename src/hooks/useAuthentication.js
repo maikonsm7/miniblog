@@ -32,10 +32,8 @@ export const useAuthentication = () => {
             setLoading(false)
         } catch (error) {
             let msg
-            if(error.message.includes('user-not-found')){
-                msg = 'Usuário não encontrado!'
-            }else if(error.message.includes('wrong-password')){
-                msg = 'Senha incorreta!'
+            if(error.message.includes('invalid-credential')){
+                msg = 'Usuário ou senha inválido!'
             }else{
                 msg = 'Ocorreu um erro! Tente novamente mais tarde.'
             }
@@ -49,7 +47,7 @@ export const useAuthentication = () => {
         setLoading(true)
         try {
             const {user} = await createUserWithEmailAndPassword(auth, data.email, data.pass)
-            await updateProfile(user, {name: data.name})
+            await updateProfile(user, {displayName: data.displayName})
             setLoading(false)
             return user
         } catch (error) {

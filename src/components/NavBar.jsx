@@ -22,7 +22,7 @@ const NavBar = () => {
             </>
             )}
             <NavLink to={'/about'}>Sobre</NavLink>
-            {user && <button onClick={logout}>Sair</button>}
+            {user && <button className='btn-danger' onClick={logout}>Sair</button>}
             </nav>
         </div>
     )
