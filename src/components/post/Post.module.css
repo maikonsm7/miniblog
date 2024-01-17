@@ -1,0 +1,27 @@
+.post{
+    margin-bottom: 2em;
+    max-width: 300px;
+    margin: auto;
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+    padding-bottom: 1em;
+    border-radius: 7px;
+}
+.body{
+    text-align: left;
+}
+.img{
+    max-width: 300px;
+}
+.tags{
+    margin-bottom: 1em;
+    display: flex;
+}
+.tags p{
+    margin-right: .5em;
+}
+.createdby{
+    font-style: italic;
+    color: #444;
+    font-size: .8em;
+}

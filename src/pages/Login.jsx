@@ -23,6 +23,7 @@ const Login = () => {
         }
 
         const res = await loginUser(user)
+        console.log(res)
     }
     return(
         <div>

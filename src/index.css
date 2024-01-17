@@ -34,10 +34,11 @@ input, textarea{
   border: none;
   padding: 10px 15px;
   font-size: 1em;
+  text-decoration: none;
 }
 .btn.btn-dark{
   background-color: #000;
-  border-radius: 0;
+  border-radius: 10px;
 }
 .btn.btn-outline{
   background-color: transparent;
