@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useState } from 'react'
 import { useFetchDocuments } from '../hooks/useFetchDocuments'
 import Post from '../components/post/Post'
@@ -10,6 +10,9 @@ const Home = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if(query){
+            return Navigate(`/search?q=${query}`)
+        }
     }
     return(
         <div className={styles.search_form}>

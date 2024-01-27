@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import { useAuthentication } from './hooks/useAuthentication';
 // context
 import { AuthProvider } from './context/AuthContext';
+import Search from './pages/Search';
 
 function App() {
   const [user, setUser] = useState(undefined)
@@ -41,6 +42,7 @@ function App() {
         <Route path={'/posts/create'} element={user ? <CreatePost /> : <Navigate to='/login'/>}/>
         <Route path={'/dashboard'} element={user ? <Dashboard /> : <Navigate to='/login'/>}/>
         <Route path={'/about'} element={<About />}/>
+        <Route path={'/search'} element={<Search />}/>
       </Routes>
       <Footer />
       </BrowserRouter>
