@@ -15,6 +15,7 @@ import { useAuthentication } from './hooks/useAuthentication';
 // context
 import { AuthProvider } from './context/AuthContext';
 import Search from './pages/Search';
+import Post from './pages/Post';
 
 function App() {
   const [user, setUser] = useState(undefined)
@@ -43,6 +44,7 @@ function App() {
         <Route path={'/dashboard'} element={user ? <Dashboard /> : <Navigate to='/login'/>}/>
         <Route path={'/about'} element={<About />}/>
         <Route path={'/search'} element={<Search />}/>
+        <Route path={'/posts/:id'} element={<Post />}/>
       </Routes>
       <Footer />
       </BrowserRouter>
